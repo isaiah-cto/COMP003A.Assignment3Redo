@@ -26,6 +26,10 @@
             {
                 Console.WriteLine("Conditionally Ready");
             }
+            else
+            {
+                Console.WriteLine("Not Ready");
+            }
         }
     }
 }
