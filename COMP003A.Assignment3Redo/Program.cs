@@ -1,4 +1,7 @@
-﻿namespace COMP003A.Assignment3Redo
+﻿using System.Numerics;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace COMP003A.Assignment3Redo
 {
     internal class Program
     {
@@ -29,6 +32,30 @@
             else
             {
                 Console.WriteLine("Not Ready");
+            }
+            Console.WriteLine("Select a guidance option:");
+            Console.WriteLine("1 - Academic Planning");
+            Console.WriteLine("2 - Personal Planning");
+            Console.WriteLine("3 - Career Planning");
+            Console.Write("Enter Choice: ");
+            bool AcademicPlanning = Console.ReadLine() == ("yes");
+            bool PersonalPlanning = Console.ReadLine() == ("yes");
+            bool CareerPlanning = Console.ReadLine() == ("yes");
+            if (AcademicPlanning)
+            {
+                Console.WriteLine("Meet with an academic advisor to plan your next term.");
+            }
+            else if (PersonalPlanning)
+            {
+                Console.WriteLine("Meet with a personal advisor to plan your next term.");
+            }
+            else if (CareerPlanning)
+            {
+                Console.WriteLine("Meet with a career advisor to plan your next term.");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Choice");
             }
         }
     }
