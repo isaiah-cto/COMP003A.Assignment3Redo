@@ -12,10 +12,12 @@ namespace COMP003A.Assignment3Redo
             DateTime Now = DateTime.Now;
             int currentYear = Now.Year;
             Console.Write("Enter your birth year: ");
+            int birthYear = int.Parse(Console.ReadLine());
             string name = Console.ReadLine();
             int age = DateTime.Now.Year;
             string ReadinessCategory = age >= 18 ? "Adult" : "Child";
-            Console.WriteLine($"Calculated Age: ");
+            int CalculatedAge = currentYear - birthYear;
+            Console.WriteLine($"Calculated Age: {CalculatedAge}");
             Console.WriteLine($"Readiness Category: {ReadinessCategory}");
             Console.Write("Do you have a valid ID? (yes/no): ");
             bool hasvalidID = Console.ReadLine() == ("yes");
@@ -44,18 +46,22 @@ namespace COMP003A.Assignment3Redo
             bool CareerPlanning = Console.ReadLine() == ("3");
             if (AcademicPlanning)
             {
+                Console.WriteLine("Guidance: ");
                 Console.WriteLine("Meet with an academic advisor to plan your next term.");
             }
             else if (PersonalPlanning)
             {
+                Console.WriteLine("Guidance: ");
                 Console.WriteLine("Meet with a personal advisor to plan your next term.");
             }
             else if (CareerPlanning)
             {
+                Console.WriteLine("Guidance: ");
                 Console.WriteLine("Meet with a career advisor to plan your next term.");
             }
             else
             {
+                Console.WriteLine("Guidance: ");
                 Console.WriteLine("Invalid Choice");
             }
         }
