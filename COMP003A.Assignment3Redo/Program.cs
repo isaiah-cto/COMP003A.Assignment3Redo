@@ -8,14 +8,15 @@ namespace COMP003A.Assignment3Redo
         static void Main(string[] args)
         {
             Console.Write("Current Year: ");
+            Console.ReadLine();
             DateTime Now = DateTime.Now;
             int currentYear = Now.Year;
             Console.Write("Enter your birth year: ");
             string name = Console.ReadLine();
             int age = DateTime.Now.Year;
             string ReadinessCategory = age >= 18 ? "Adult" : "Child";
-            Console.WriteLine($"Calculated Age: 21");
-            Console.WriteLine($"Readiness Category: Adult");
+            Console.WriteLine($"Calculated Age: ");
+            Console.WriteLine($"Readiness Category: {ReadinessCategory}");
             Console.Write("Do you have a valid ID? (yes/no): ");
             bool hasvalidID = Console.ReadLine() == ("yes");
             Console.Write("Have you completed orientation? (yes/no): ");
@@ -38,9 +39,9 @@ namespace COMP003A.Assignment3Redo
             Console.WriteLine("2 - Personal Planning");
             Console.WriteLine("3 - Career Planning");
             Console.Write("Enter Choice: ");
-            bool AcademicPlanning = Console.ReadLine() == ("yes");
-            bool PersonalPlanning = Console.ReadLine() == ("yes");
-            bool CareerPlanning = Console.ReadLine() == ("yes");
+            bool AcademicPlanning = Console.ReadLine() == ("1");
+            bool PersonalPlanning = Console.ReadLine() == ("2");
+            bool CareerPlanning = Console.ReadLine() == ("3");
             if (AcademicPlanning)
             {
                 Console.WriteLine("Meet with an academic advisor to plan your next term.");
